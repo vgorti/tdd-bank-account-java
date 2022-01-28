@@ -8,9 +8,11 @@ import static org.xpdojo.bank.AccountBuilder.anAccount;
 
 public class AccountTest {
 
+    private static final Money ZERO_MONEY = new Money(0);
+
     @Test
     public void depositAnAmountToEmptyAccount() {
-        Account account = anAccount().withBalance(new Money(0)).build();
+        Account account = anAccount().withBalance(ZERO_MONEY).build();
         Money amount = new Money(10);
 
         Money balance = account.deposit(amount);
