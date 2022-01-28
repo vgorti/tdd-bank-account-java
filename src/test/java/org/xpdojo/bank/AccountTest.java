@@ -20,4 +20,15 @@ public class AccountTest {
         assertThat(balance).isEqualTo(amount);
     }
 
+    @Test
+    public void depositAnAmountToAccountToIncreaseBalance() {
+        Money currentBalance = new Money(10);
+        Account account = anAccount().withBalance(currentBalance).build();
+        Money amount = new Money(10);
+
+        Money balance = account.deposit(amount);
+
+        assertThat(balance).isEqualTo(new Money(20));
+    }
+
 }

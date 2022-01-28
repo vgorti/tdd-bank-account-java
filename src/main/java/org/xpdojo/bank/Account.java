@@ -8,6 +8,6 @@ public class Account {
     }
 
     public Money deposit(Money amount) {
-        return amount;
+        return balance.add(amount);
     }
 }
