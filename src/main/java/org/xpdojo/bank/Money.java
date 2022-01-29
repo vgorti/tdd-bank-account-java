@@ -15,4 +15,8 @@ public class Money {
     public Money add(Money currentAmount) {
         return new Money(amt + currentAmount.amt);
     }
+
+    public Money subtract(Money withdrawAmount) {
+        return new Money( amt - withdrawAmount.amt);
+    }
 }

@@ -10,4 +10,8 @@ public class Account {
     public Money deposit(Money amount) {
         return balance.add(amount);
     }
+
+    public Money withdraw(Money withdrawAmount) {
+        return balance.subtract(withdrawAmount);
+    }
 }
